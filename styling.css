@@ -3,25 +3,25 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #f64a8a;
+    background-color: #98777b;
 }
 
 header, footer {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 1em 0;
+    padding: 16px 0;
 }
 
 nav {
-    background-color: #eee;
+    background-color: #996666;
     padding: 1em;
     text-align: center;
 }
 
 nav a {
     text-decoration: none;
-    color: #333;
+    color:#996666;
     margin: 0 1em;
     font-weight: bold;
 
@@ -37,7 +37,7 @@ section h2 {
 }
 
 footer {
-    position: absolute;
+ 
     bottom: 0;
     width: 100%;
 }
@@ -106,19 +106,20 @@ float: left;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
+    color:#b76e79;
 }
 
-/* about section image css */
+
 .imageAboutPage {
     width: 100%;
 }
 
-/* services section css */
+
 .servicesText.card {
     height: 280px;
     cursor: pointer;
   }
+
 .servicesIcon {
     font-size: 36px;
     text-align: center;
@@ -127,44 +128,28 @@ float: left;
 .card-title {
     text-align: center;
 }
+
 .card:hover .servicesIcon {
     color: #008000;
 }
+
 .servicesText:hover {
     border: 1px solid #008000;
 }
 
-/* display background color black on navbar scroll */
-.navbarScroll.navbarDark {
-    background-color: black;
-}
 
-/* social media icons styling */
-.social-icons {
-    font-size: 36px;
-    cursor: pointer;
-}
-.fa-facebook:hover,.fa-instagram:hover,.fa-twitter:hover,.fa-linkedin:hover, .fa-twitch:hover {
-    color: #008000;
-}
-.fab {
-    color: #000000;
-}
-/* footer styling */
 #footer {
     background-color: #808080;
     text-align: center;
 }
 
-/* spacing on all sections */
 #about, #services, #portfolio, #contact {
-    margin-top: 4rem;
-    padding-top: 4rem;
+    margin-top: 64px;
+    padding-top: 64px;
 }
 #contact {
-    padding-bottom: 4rem;
+    padding-bottom: 64px;
 }
-
 
 
 
