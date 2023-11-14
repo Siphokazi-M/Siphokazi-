@@ -6,70 +6,50 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styling.css">
         <title>My Portfolio</title>
-        <style>
-       
-        </style>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
+<script src="https://kit.fontawesome.com/31149d48b0.js" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+ 
     </head>
     <body>
 
-        
-<script>
-    function getLocation() {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(showWeather);
-  } else {
-    alert("Geolocation is not supported by this browser.");
-  }
-}
+        <nav class="navbar navbar-expand-lg fixed-top navbarScroll">
+       
+            <div class="container">
+                <a class="navbar-brand" href="#">Siphokazi</a>
 
-async function showWeather(position) {
-  const latitude = position.coords.latitude;
-  const longitude = position.coords.longitude;
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-  // Replace 'YOUR_API_KEY' with your OpenWeatherMap API key
-  const apiKey = "2718952144ed077c12e7c160fb6fc351";
-  const apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#home">Home</a>
+                        </li>
 
-  try {
-    const response = await axios.get(apiUrl);
-    const data = response.data;
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
 
-    const locationElement = document.getElementById("location");
-    const conditionElement = document.getElementById("condition");
-    const temperatureElement = document.getElementById("temperature");
-    const countryElement = document.getElementById("country");
+                        <li class="nav-item">
+                            <a class="nav-link" href="#services">Services</a>
+                        </li>
 
-    locationElement.textContent = `Location: ${data.name}`;
-    conditionElement.textContent = `Condition: ${data.weather[0].description}`;
-    temperatureElement.textContent = `Temperature: ${data.main.temp}°C`;
-    countryElement.textContent = `Country Code: ${data.sys.country}`;
-  } catch (error) {
-    console.error("Error fetching data:", error);
-  }
-}
-</script>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#portfolio">Portfolio</a>
+                        </li>
 
-
-
-<nav style="display: flex;">
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#portfolio">Portfolio</a>
-    <a href="#contact">Contact</a>
-    
-
-    <div class="weather-container" style="text-align: left; flex: left;">
-        <h1>Weather App</h1>
-        <div class="weather-info">
-            <p id="location"></p>
-            <p id="condition"></p>
-            <p id="temperature"></p>
-            <p id="country"></p>
-        </div>
-        <button onclick="getLocation()">Get Weather</button>
-    </div>
-</nav>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                    
+                </div>
+            </div>
+        </nav>
 
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="app.js"></script>
@@ -80,6 +60,18 @@ async function showWeather(position) {
     <section class="bgimage" id="home">
         <div class="container-fluid">
             <div class="row">
+
+            <div class="weather-container" style="margin-top: 20px;">
+                <h1>Weather App</h1>
+                <div class="weather-info">
+                    <p id="location"></p>
+                    <p id="condition"></p>
+                    <p id="temperature"></p>
+                    <p id="country"></p>
+                </div>
+                <button onclick="getLocation()">Get Weather</button>
+            </div>
+
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hero-text">
                 <h2 class="hero_title">Hi, it's me Siphokazi Mahanjana</h2>
                 <p class="hero_desc">I am a junior web developer in training!</p>
@@ -334,71 +326,24 @@ async function showWeather(position) {
     </div>
 </section>
 
- <!-- footer section-->
- <footer id="footer">
-    <div class="container-fluid">
-        <!-- social media icons -->
-        <div class="social-icons mt-4">
-            <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://www.twitch.tv/" target="_blank"><i class="fab fa-twitch"></i></a>
-        </div>
-    </div>
-</footer>
+<section class="social-icons">
+    <h2>Contact Me</h2><br>
+    <ul class="social-icons">
+        <li><a href="https://www.facebook.com/profile.php?id=100006770057646"><ion-icon name="logo-facebook"></ion-icon></a></li>
+        <li><a href="https://wa.me/qr/JPU2OFDOEHTHB1"><ion-icon name="logo-whatsapp"></ion-icon></a></li>
+        <li><a href="https://instagram.com/siphiwokazi_samaxaba?igshid=MzMyNGUyNmU2YQ=="><ion-icon name="logo-instagram"></ion-icon></a></li>
+        <li><a href="https://www.linkedin.com/in/siphokazi-mahanjana-02a5a11b7?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+        <li><a href="https://www.tiktok.com/@siphokaayy?_t=8hHSJKDVzWv&_r=1"><ion-icon name="logo-tiktok"></ion-icon></a></li>
+        <li><ion-icon name="logo-twitter"></ion-icon></li>
+    </ul>
+</section>
 
-
-
-        <h2>Contact Me</h2>
-        <p>Feel free to reach out to me through the following social media platforms:</p>
-        <ul class="social-icons">
-            <li><a href="https://www.facebook.com/profile.php?id=100006770057646"><ion-icon name="logo-facebook"></ion-icon></a></li>
-            <li><a href="https://wa.me/qr/JPU2OFDOEHTHB1"><ion-icon name="logo-whatsapp"></ion-icon></a></li>
-            <li><a href="https://instagram.com/siphiwokazi_samaxaba?igshid=MzMyNGUyNmU2YQ=="><ion-icon name="logo-instagram"></ion-icon></a></li>
-            <li><a href="https://www.linkedin.com/in/siphokazi-mahanjana-02a5a11b7?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><ion-icon name="logo-linkedin"></ion-icon></a></li>
-            <li><a href="https://www.tiktok.com/@siphokaayy?_t=8hHSJKDVzWv&_r=1"><ion-icon name="logo-tiktok"></ion-icon></a></li>
-            <li><ion-icon name="logo-twitter"></ion-icon></li>
-        </ul>
-    </section>
-
-
-   
-        <footer>
-            <p>&copy; 2023 My Portfolio. All rights reserved. </p>
-        </footer>
+<footer>
+    <p>&copy; 2023 My Portfolio. All rights reserved. </p>
+</footer> 
 
        
-        <script>
-            // Weather API
-            function getLocation() {
-                if (navigator.geolocation) {
-                    navigator.geolocation.getCurrentPosition(showWeather);
-                } else {
-                    alert("Geolocation is not supported by this browser.");
-                }
-            }
-    
-            function showWeather(position) {
-                const apiKey = 'YOUR_OPENWEATHERMAP_API_KEY';
-                const latitude = position.coords.latitude;
-                const longitude = position.coords.longitude;
-                const apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${f3548597b68d84adc634d43be}`;
-    
-                fetch(apiUrl)
-                    .then(response => response.json())
-                    .then(data => {
-                        const temperature = data.main.temp - 273.15; // Convert to Celsius
-                        document.getElementById('weather-info').innerText = `Temperature: ${temperature.toFixed(2)}°C`;
-                    })
-                    .catch(error => {
-                        console.error('Error fetching weather data:', error);
-                    });
-            }
-    
-            
-        </script>
-    
+      
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
         
