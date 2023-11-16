@@ -1,4 +1,3 @@
-// add class navbarDark on navbar scroll
 const header = document.querySelector('.navbar');
 
 window.onscroll = function() {
@@ -23,7 +22,7 @@ function getLocation() {
     const latitude = position.coords.latitude;
     const longitude = position.coords.longitude;
   
-    // Replace 'YOUR_API_KEY' with your OpenWeatherMap API key
+    
     const apiKey = "f3548597b68d84adc634d43be05fd24a";
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
   
@@ -44,24 +43,10 @@ function getLocation() {
       console.error("Error fetching data:", error);
     }
   }
-// Get the button
-    var mybutton = document.getElementById("scrollToTopBtn");
 
-    // When the user scrolls down 20px from the top of the document, show the button
-    window.onscroll = function() {
-      scrollFunction();
-    };
-
-    function scrollFunction() {
-      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        mybutton.style.display = "block";
-      } else {
-        mybutton.style.display = "none";
-      }
-    }
-
-    // When the user clicks on the button, scroll to the top of the document
-    function scrollToTop() {
-      document.body.scrollTop = 0; // For Safari
-      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
-    }
+  function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  }
