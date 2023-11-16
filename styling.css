@@ -6,7 +6,7 @@ body {
     background-color: #98777b;
 }
 
-header, footer {
+footer {
     background-color: #333;
     color: #fff;
     text-align: center;
@@ -15,25 +15,25 @@ header, footer {
 
 nav {
     background-color: #996666;
-    padding: 1em;
+    padding: 32;
     text-align: center;
 }
 
 nav a {
     text-decoration: none;
     color:#996666;
-    margin: 0 1em;
+    margin: 0 16px;
     font-weight: bold;
 
 }
 
 
 section {
-    padding: 2em;
+    padding: 32px;
 }
 
 section h2 {
-    color: #333;
+    color: #FFE4E1;
 }
 
 footer {
@@ -42,10 +42,7 @@ footer {
     width: 100%;
 }
 
- /* ... Existing styles ... */
 
-
-/* Responsive Navigation */
 @media only screen and (max-width: 600px) {
 nav {
     display: flex;
@@ -58,42 +55,53 @@ nav a {
 }
 }
 
-/* Social Media Icons */
+  .social-icons {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    padding: 0;
+    text-align: center;
+    margin-top: 20px;
+    background-color:  #996666;
+    padding: 16px;
+    flex-direction: row;
+  }
 
-.social-icons {
+ 
+  .social-icons ul {
     list-style: none;
     padding: 0;
+    margin: 0;
     display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    background-color: pink;
-    padding: 16px;
-    border-radius: 10px;
-}
+  }
 
-.social-icons li {
-margin: 0 10px;
-}
+  .social-icons li {
+    margin: 0 10px; 
+    margin: 0 10px;
+  }
 
-.social-icons a {
-text-decoration: none;
-color: #fff;
-font-size: 24px;
-}
+  .social-icons a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 24px;
+    } 
 
-/* Weather API */
+  .social-icons ion-icon {
+    font-size: 2em;
+  }
+
 #weather {
 float: left;
 }
 
-/* hero background image */
+
 .bgimage {
     height:100vh;
     background: url("IMG-20231114-WA0023.jpg");
     background-size:cover;
     position:relative;
 }
-/* text css above hero image*/
+
 .hero_title {
     font-size: 72px;
 }
@@ -106,7 +114,7 @@ float: left;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color:#b76e79;
+    color:#C08081;
 }
 
 
@@ -151,7 +159,27 @@ float: left;
     padding-bottom: 64px;
 }
 
+ #scrollToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #C08081;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
 
 
+  #scrollToTopBtn::after {
+    content: '\2191'; 
+    margin-left: 5px;
+  }
 
-
+  
+  #scrollToTopBtn:hover {
+    background-color: #C4AEAD;
+  }
