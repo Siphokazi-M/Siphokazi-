@@ -95,8 +95,13 @@ nav a {
     height:100vh;
     background: url("home.jpg");
     background-size:cover;
-    position:relative;
+    position:fixed;
 }
+
+ #weather{
+    border-radius: 5px solid  #996666 ;
+    background: #FFE4E1;
+  }
 
 .hero_title {
     font-size: 72px;
