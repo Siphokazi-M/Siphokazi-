@@ -97,7 +97,7 @@ float: left;
 
 .bgimage {
     height:100vh;
-    background: url("IMG-20231114-WA0023.jpg");
+    background: url("home.jpg");
     background-size:cover;
     position:relative;
 }
