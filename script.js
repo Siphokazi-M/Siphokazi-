@@ -44,6 +44,10 @@ function getLocation() {
     }
   }
 
+        function showThankYou() {
+            document.getElementById('thankYouMessage').style.display = 'block';
+        }
+
   function scrollToTop() {
     window.scrollTo({
       top: 0,
