@@ -98,10 +98,10 @@ nav a {
     position:relative;
 }
 
- #weather{
-    border-radius: 5px solid  #996666 ;
+#weather{
+    border: 5px solid  #996666 ;
     background: #FFE4E1;
-     text-align: center;
+   text-align: center;
   }
 
 .hero_title {
