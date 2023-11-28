@@ -97,7 +97,7 @@ float: left;
 
 .bgimage {
     height:100vh;
-    background: url("home.jpg");
+    background: url("home.webp");
     background-size:cover;
     position:relative;
 }
