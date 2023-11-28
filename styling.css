@@ -95,12 +95,13 @@ nav a {
     height:100vh;
     background: url("home.jpg");
     background-size:cover;
-    position:fixed;
+    position:absolute;
 }
 
  #weather{
     border-radius: 5px solid  #996666 ;
     background: #FFE4E1;
+     text-align: center;
   }
 
 .hero_title {
