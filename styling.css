@@ -111,6 +111,8 @@ nav a {
 }
 .hero_desc {
     font-size: 32px;
+    font-weight: bold;
+    color:#fffff;
 }
 .hero-text {
     text-align: center;
